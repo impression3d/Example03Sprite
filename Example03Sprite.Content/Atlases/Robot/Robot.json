@@ -1,0 +1,69 @@
+{
+    "SubTexture": [
+        {
+            "y": 60,
+            "height": 53,
+            "x": 135,
+            "name": "lowerbody",
+            "width": 44
+        },
+        {
+            "y": 0,
+            "height": 99,
+            "x": 0,
+            "name": "upperbody",
+            "width": 60
+        },
+        {
+            "y": 0,
+            "height": 59,
+            "x": 135,
+            "name": "head",
+            "width": 49
+        },
+        {
+            "y": 65,
+            "height": 22,
+            "x": 181,
+            "name": "leg_foot",
+            "width": 41
+        },
+        {
+            "y": 0,
+            "height": 103,
+            "x": 61,
+            "name": "leg_lower",
+            "width": 35
+        },
+        {
+            "y": 0,
+            "height": 91,
+            "x": 97,
+            "name": "leg_upper",
+            "width": 37
+        },
+        {
+            "y": 70,
+            "height": 38,
+            "x": 223,
+            "name": "arm_hand",
+            "width": 18
+        },
+        {
+            "y": 0,
+            "height": 69,
+            "x": 224,
+            "name": "arm_lower",
+            "width": 19
+        },
+        {
+            "y": 0,
+            "height": 64,
+            "x": 185,
+            "name": "arm_upper",
+            "width": 38
+        }
+    ],
+    "imagePath": "Robot.png",
+    "name": "Robot"
+}

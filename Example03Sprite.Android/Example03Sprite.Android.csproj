@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60c5aea5-10c2-4423-8974-d29be94204eb}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Example03Sprite</RootNamespace>
+    <AssemblyName>Example03Sprite</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <ReleaseVersion>0.9.0.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Android\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Android\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Impression.Animations">
+      <HintPath>..\packages\Impression.Android.0.9.5\lib\MonoAndroid\Impression.Animations.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression.Audio">
+      <HintPath>..\packages\Impression.Android.0.9.5\lib\MonoAndroid\Impression.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression">
+      <HintPath>..\packages\Impression.Android.0.9.5\lib\MonoAndroid\Impression.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression.Game">
+      <HintPath>..\packages\Impression.Android.0.9.5\lib\MonoAndroid\Impression.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression.Graphics">
+      <HintPath>..\packages\Impression.Android.0.9.5\lib\MonoAndroid\Impression.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression.Input">
+      <HintPath>..\packages\Impression.Android.0.9.5\lib\MonoAndroid\Impression.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression.Media">
+      <HintPath>..\packages\Impression.Android.0.9.5\lib\MonoAndroid\Impression.Media.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Example03Sprite.Platform\Properties.AssemblyInfo.cs">
+      <Link>Properties.AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Example03Sprite.Platform\Android\MainActivity.cs">
+      <Link>MainActivity.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Robot\arm_hand%40Robot.bin">
+      <Link>Content\Atlases\Robot\arm_hand%40Robot.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Robot\arm_lower%40Robot.bin">
+      <Link>Content\Atlases\Robot\arm_lower%40Robot.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Robot\arm_upper%40Robot.bin">
+      <Link>Content\Atlases\Robot\arm_upper%40Robot.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Robot\head%40Robot.bin">
+      <Link>Content\Atlases\Robot\head%40Robot.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Robot\leg_foot%40Robot.bin">
+      <Link>Content\Atlases\Robot\leg_foot%40Robot.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Robot\leg_lower%40Robot.bin">
+      <Link>Content\Atlases\Robot\leg_lower%40Robot.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Robot\leg_upper%40Robot.bin">
+      <Link>Content\Atlases\Robot\leg_upper%40Robot.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Robot\lowerbody%40Robot.bin">
+      <Link>Content\Atlases\Robot\lowerbody%40Robot.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Robot\Robot.bin">
+      <Link>Content\Atlases\Robot\Robot.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Robot\upperbody%40Robot.bin">
+      <Link>Content\Atlases\Robot\upperbody%40Robot.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\head%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\head%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\innerarm_hand%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerarm_hand%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\innerarm_lower%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerarm_lower%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\innerarm_upper%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerarm_upper%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\innerleg_foot%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerleg_foot%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\innerleg_lower%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerleg_lower%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\innerleg_upper%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerleg_upper%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\innerweapon%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerweapon%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\lowerbody%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\lowerbody%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\outerarm_hand%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerarm_hand%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\outerarm_lower%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerarm_lower%40Warrior.bin</Link>
+    </Content>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\outerarm_upper%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerarm_upper%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\outerleg_foot%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerleg_foot%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\outerleg_lower%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerleg_lower%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\outerleg_upper%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerleg_upper%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\upperbody%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\upperbody%40Warrior.bin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Example03Sprite.Content\bin\Android\Release\Atlases\Warrior\Warrior.bin">
+      <Link>Content\Atlases\Warrior\Warrior.bin</Link>
+    </AndroidAsset>
+  </ItemGroup>
+  <Import Project="..\Example03Sprite.Shared\Example03Sprite.Shared.projitems" Label="Shared" Condition="Exists('..\Example03Sprite.Shared\Example03Sprite.Shared.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Impression.Android.0.9.5\build\Impression.Android.targets" Condition="Exists('..\packages\Impression.Android.0.9.5\build\Impression.Android.targets')" />
+</Project>

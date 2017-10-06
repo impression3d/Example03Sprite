@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{a03fb9a2-23fd-4cba-89c1-119ef1b067d8}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Example03Sprite</RootNamespace>
+    <AssemblyName>Example03Sprite</AssemblyName>
+    <ReleaseVersion>0.9.0.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>50929</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Impression.Animations">
+      <HintPath>..\packages\Impression.iOS.0.9.5\lib\Xamarin.iOS\Impression.Animations.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression.Audio">
+      <HintPath>..\packages\Impression.iOS.0.9.5\lib\Xamarin.iOS\Impression.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression">
+      <HintPath>..\packages\Impression.iOS.0.9.5\lib\Xamarin.iOS\Impression.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression.Game">
+      <HintPath>..\packages\Impression.iOS.0.9.5\lib\Xamarin.iOS\Impression.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression.Graphics">
+      <HintPath>..\packages\Impression.iOS.0.9.5\lib\Xamarin.iOS\Impression.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression.Input">
+      <HintPath>..\packages\Impression.iOS.0.9.5\lib\Xamarin.iOS\Impression.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Impression.Media">
+      <HintPath>..\packages\Impression.iOS.0.9.5\lib\Xamarin.iOS\Impression.Media.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Example03Sprite.Platform\Properties.AssemblyInfo.cs">
+      <Link>Properties.AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Example03Sprite.Platform\iOS\MainAppDelegate.cs">
+      <Link>MainAppDelegate.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Example03Sprite.Platform\iOS\Default-568h%402x.png">
+      <Link>Default-568h%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Platform\iOS\Default.png">
+      <Link>Default.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Platform\iOS\Default%402x.png">
+      <Link>Default%402x.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Robot\arm_hand%40Robot.bin">
+      <Link>Content\Atlases\Robot\arm_hand%40Robot.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Robot\arm_lower%40Robot.bin">
+      <Link>Content\Atlases\Robot\arm_lower%40Robot.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Robot\arm_upper%40Robot.bin">
+      <Link>Content\Atlases\Robot\arm_upper%40Robot.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Robot\head%40Robot.bin">
+      <Link>Content\Atlases\Robot\head%40Robot.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Robot\leg_foot%40Robot.bin">
+      <Link>Content\Atlases\Robot\leg_foot%40Robot.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Robot\leg_lower%40Robot.bin">
+      <Link>Content\Atlases\Robot\leg_lower%40Robot.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Robot\leg_upper%40Robot.bin">
+      <Link>Content\Atlases\Robot\leg_upper%40Robot.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Robot\lowerbody%40Robot.bin">
+      <Link>Content\Atlases\Robot\lowerbody%40Robot.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Robot\Robot.bin">
+      <Link>Content\Atlases\Robot\Robot.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Robot\upperbody%40Robot.bin">
+      <Link>Content\Atlases\Robot\upperbody%40Robot.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\head%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\head%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\innerarm_hand%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerarm_hand%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\innerarm_lower%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerarm_lower%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\innerarm_upper%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerarm_upper%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\innerleg_foot%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerleg_foot%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\innerleg_lower%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerleg_lower%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\innerleg_upper%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerleg_upper%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\innerweapon%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\innerweapon%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\lowerbody%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\lowerbody%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\outerarm_hand%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerarm_hand%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\outerarm_lower%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerarm_lower%40Warrior.bin</Link>
+    </Content>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\outerarm_upper%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerarm_upper%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\outerleg_foot%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerleg_foot%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\outerleg_lower%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerleg_lower%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\outerleg_upper%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\outerleg_upper%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\upperbody%40Warrior.bin">
+      <Link>Content\Atlases\Warrior\upperbody%40Warrior.bin</Link>
+    </BundleResource>
+    <BundleResource Include="..\Example03Sprite.Content\bin\iOS\Release\Atlases\Warrior\Warrior.bin">
+      <Link>Content\Atlases\Warrior\Warrior.bin</Link>
+    </BundleResource>
+  </ItemGroup>
+  <Import Project="..\Example03Sprite.Shared\Example03Sprite.Shared.projitems" Label="Shared" Condition="Exists('..\Example03Sprite.Shared\Example03Sprite.Shared.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Impression.iOS.0.9.5\build\Impression.iOS.targets" Condition="Exists('..\packages\Impression.iOS.0.9.5\build\Impression.iOS.targets')" />
+</Project>

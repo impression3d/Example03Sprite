@@ -1,0 +1,18 @@
+<TextureAtlas name="Warrior" imagePath="Warrior.png">
+  <SubTexture name="outerarm_upper" x="312" y="130" width="71" height="110"/>
+  <SubTexture name="outerarm_lower" x="385" y="227" width="61" height="81"/>
+  <SubTexture name="outerarm_hand" x="193" y="155" width="44" height="45"/>
+  <SubTexture name="lowerbody" x="244" y="0" width="106" height="126"/>
+  <SubTexture name="outerleg_foot" x="106" y="155" width="86" height="60"/>
+  <SubTexture name="outerleg_lower" x="244" y="127" width="66" height="125"/>
+  <SubTexture name="outerleg_upper" x="40" y="0" width="109" height="142"/>
+  <SubTexture name="upperbody" x="351" y="0" width="92" height="129"/>
+  <SubTexture name="head" x="40" y="144" width="65" height="96"/>
+  <SubTexture name="innerleg_foot" x="106" y="216" width="86" height="58"/>
+  <SubTexture name="innerleg_lower" x="444" y="0" width="62" height="131"/>
+  <SubTexture name="innerleg_upper" x="150" y="0" width="93" height="153"/>
+  <SubTexture name="innerweapon" x="0" y="0" width="39" height="333"/>
+  <SubTexture name="innerarm_upper" x="433" y="132" width="75" height="93"/>
+  <SubTexture name="innerarm_lower" x="193" y="253" width="80" height="57"/>
+  <SubTexture name="innerarm_hand" x="385" y="130" width="47" height="42"/>
+</TextureAtlas>
