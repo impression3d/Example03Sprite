@@ -9,5 +9,17 @@
   <References>
   </References>
   <Items>
+    <Item Include="\Atlases\Robot\Robot.json">
+      <Name>Robot</Name>
+      <BuildAction>Compile</BuildAction>
+      <Importer Name="TextureAtlasImporter" />
+      <Processor Name="SpriteSheetProcessor"/>
+    </Item>
+    <Item Include="\Atlases\Warrior\Warrior.xml">
+      <Name>Warrior</Name>
+      <BuildAction>Compile</BuildAction>
+      <Importer Name="TextureAtlasImporter" />
+      <Processor Name="SpriteSheetProcessor"/>
+    </Item>
   </Items>
 </ContentProject>
